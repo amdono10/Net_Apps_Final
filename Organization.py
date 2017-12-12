@@ -42,9 +42,11 @@ def parameters():
 			print("System: saving server parameters.")
 			
 		else:
+			print("Proper input params: -h <host> -p <port> -s <size> -b <backlog>")
 			sys.exit("Error: invalid format of parameters.")
         
 	else:
+		print("Proper input params: -h <host> -p <port> -s <size> -b <backlog>")
 		sys.exit("Error: invalid number of parameters.")
 
 def setup():
