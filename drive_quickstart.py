@@ -8,7 +8,7 @@ gauth.LocalWebserverAuth()
 
 drive = GoogleDrive(gauth)
 
-file1 = drive.CreateFile({'title': 'Test_Upload.txt'})
-file1.SetContentString('We are putting in some text!')
+file1 = drive.CreateFile()
+file1.SetContentFile('test1.doc')
 file1.Upload()
-print('title: %s, id: %s' % (file1['title'], file1['id']))
+print('title: %s, filetype: %s' % (file1['title'], file1['mimeType']))
