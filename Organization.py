@@ -107,6 +107,17 @@ def upload():
 			r = r.json()
 			
 	print("System: uploading documents to Google Drive.")
+	for title in titles: 
+		gauth = GoogleAuth()
+		gauth.LocalWebServerAuth()
+		
+		drive = GoogleDrive(gauth)
+		
+		file = drive.CreateFile()
+		file.SetContentFile(title)
+		file.Upload()
+		print('title: %s, type: %s' % (file['title'], file['mimeType']))
+		
 	
 	
 
