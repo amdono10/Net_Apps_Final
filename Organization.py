@@ -109,7 +109,7 @@ def upload():
 	print("System: uploading documents to Google Drive.")
 	for title in titles: 
 		gauth = GoogleAuth()
-		gauth.LocalWebServerAuth()
+		gauth.LocalWebserverAuth()
 		
 		drive = GoogleDrive(gauth)
 		
