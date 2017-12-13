@@ -118,6 +118,8 @@ def upload():
 		file.Upload()
 		print('title: %s, type: %s' % (file['title'], file['mimeType']))
 		
+	titles.clear()
+		
 	
 	
 
